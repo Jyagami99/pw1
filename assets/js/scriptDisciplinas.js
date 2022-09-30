@@ -28,11 +28,38 @@ function cadastrarDisciplina(){
         );
 
     if (cadastro == -1) {
-        arrayDisciplinas.push(disciplinas);
-        console.log(arrayDisciplinas);
-        return alert("Cadastro realizado com sucesso!");
+        arrayDisciplinas.push(Object.values(disciplinas));
+        alert("Cadastro realizado com sucesso!");
     } else {
-        return alert("Disciplina já está cadastrada no sistema!");
+        alert("Disciplina já está cadastrada no sistema!");
     }
 }
 
+function mostraDisciplina() {
+    if (arrayDisciplinas.length > 0) {
+        let formulario = document.querySelector(".formularioCadastro");
+        formulario.classList.toggle(".d-none");
+  
+        let listaDeDisciplinas = "";
+  
+        for (let i = 0; i < arrayDisciplinas.length; i++) {
+            listaDeDisciplinas += ` 
+            <p>
+            Sigla: ${arrayDisciplinas[i].Sigla} 
+            <br>
+            Nome Disciplina:  ${arrayDisciplinas[i].NomeDisciplina}
+            <br>
+            Ementa: ${arrayDisciplinas[i].Ementa}
+            <br>
+            Livros e Bibliografia: ${arrayDisciplinas[i].LivrosBibliografia} 
+            <br>
+            Número de Créditos: ${arrayDisciplinas[i].NumeroCreditos} 
+            <br>
+            Carga Horária: ${arrayDisciplinas[i].CargaHoraria} 
+            </p>`;
+        }
+        document.querySelector(".conteudo").innerHTML = listaDeDisciplinas;
+    } else {
+      alert("Não há disciplinas cadastradas!");
+    }
+  }
