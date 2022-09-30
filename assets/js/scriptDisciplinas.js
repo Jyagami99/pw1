@@ -12,7 +12,7 @@ function cadastrarDisciplina(){
 
     function verificarCadastro(VetorDisciplina, Sigla) {
         for (let i = 0; i < VetorDisciplina.length; i++) {
-          if (VetorDisciplina[i].Sigla == Sigla) {
+          if (VetorDisciplina[i][0] === Sigla) {
             return i;
           }
         }
@@ -35,7 +35,7 @@ function cadastrarDisciplina(){
     }
 }
 
-function mostraDisciplina() {
+function mostrarDisciplinas() {
     if (arrayDisciplinas.length > 0) {
         let formulario = document.querySelector(".formularioCadastro");
         formulario.classList.toggle(".d-none");
