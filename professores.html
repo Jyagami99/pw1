@@ -21,15 +21,14 @@
     </div>
     <div class="container">
       <div class="submenu">
-        <label for="tab1" class="aba">Cadastrar novo professor</label>
-        <input type="radio" name="tabs" class="sub_tabs" id="tab1" />
-        <label for="tab2">Listar todos cadastrados</label>
-        <input type="radio" name="tabs" class="sub_tabs" id="tab2" />
-        <label for="tab3">Listar um professor</label>
-        <input type="radio" name="tabs" class="sub_tabs" id="tab3" />
+        <div onclick="">Cadastrar um novo professor</div>
+        <div onclick="mostraProfessor()">Listar todos os professores</div>
+        <div onclick="">Listar um professor específico</div>
+        <div onclick="">Altera um dado</div>
+        <div onclick="">Excluir um dado</div>
       </div>
-      <div class="formulario">
-        <form name="searchfield" method="get">
+      <div class="conteudo">
+        <form class="formularioCadastro" name="searchfield" method="get">
           <input
             type="text"
             id="registrof"
@@ -93,69 +92,6 @@
           </button>
         </form>
       </div>
-      <!-- <ul>
-        <li>
-          <label for="tab1" class="aba">Cadastrar novo professor</label>
-          <input type="radio" name="tabs" class="sub_tabs" id="tab1" />
-          <div class="content">
-            <div>
-              <form name="searchfield" method="get">
-                <label for="registrof">Registro Funcional:</label>
-                <input type="text" id="registrof" name="registrof" required />
-                <label for="nomec">Nome completo:</label>
-                <input type="text" id="nomec" name="nomec" required />
-                <label for="datanasc">Data de nascimento:</label>
-                <input type="date" id="datanasc" name="datanasc" required />
-                <label for="sexo">Sexo</label>
-                <input type="text" id="sexo" name="sexo" required />
-                <label for="areap">Area de Pesquisa:</label>
-                <input type="text" id="areap" name="areap" required />
-                <label for="universi">Universidade de Formação:</label>
-                <input type="text" id="universi" name="universi" required />
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
-                <label type="telefone">Telefone:</label>
-                <input
-                  type="tel"
-                  id="telefone"
-                  name="telefone"
-                  minlength="10"
-                  maxlength="11"
-                  required
-                />
-              </form>
-              <button id="botao" onclick="cadastroProfessor()">
-                Cadastrar Professor
-              </button>
-            </div>
-          </div>
-        </li>
-        <li>
-          <label for="tab2">Listar todos cadastrados</label>
-          <input type="radio" name="tabs" class="sub_tabs" id="tab2" />
-          <div class="content" id="aba">
-            <button onclick="mostraProfessor(arrayProfessores)">
-              Mostrar Professor
-            </button>
-            <br />
-            <div>
-              <table id="tabelaLista"></table>
-            </div>
-          </div>
-        </li>
-        <li>
-          <label for="tab3">Listar um professor</label>
-          <input type="radio" name="tabs" class="sub_tabs" id="tab3" />
-          <div class="content" id="professor_especifico">
-            <label for="listarEspecifico">Insira o RF</label>
-            <input type="text" id="listarProfessor" />
-            <button onclick="listarEspecifico()">
-              Listar professor especifico
-            </button>
-            <table id="tabelaEspecifico"></table>
-          </div>
-        </li>
-      </ul> -->
     </div>
   </body>
 </html>
