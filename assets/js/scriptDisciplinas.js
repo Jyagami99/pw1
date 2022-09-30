@@ -45,17 +45,17 @@ function mostrarDisciplinas() {
         for (let i = 0; i < arrayDisciplinas.length; i++) {
             listaDeDisciplinas += ` 
             <p>
-            Sigla: ${arrayDisciplinas[i].Sigla} 
+            Sigla: ${arrayDisciplinas[i][0]} 
             <br>
-            Nome Disciplina:  ${arrayDisciplinas[i].NomeDisciplina}
+            Nome Disciplina:  ${arrayDisciplinas[i][1]}
             <br>
-            Ementa: ${arrayDisciplinas[i].Ementa}
+            Ementa: ${arrayDisciplinas[i][2]}
             <br>
-            Livros e Bibliografia: ${arrayDisciplinas[i].LivrosBibliografia} 
+            Livros e Bibliografia: ${arrayDisciplinas[i][3]} 
             <br>
-            Número de Créditos: ${arrayDisciplinas[i].NumeroCreditos} 
+            Número de Créditos: ${arrayDisciplinas[i][4]} 
             <br>
-            Carga Horária: ${arrayDisciplinas[i].CargaHoraria} 
+            Carga Horária: ${arrayDisciplinas[i][5]} 
             </p>`;
         }
         document.querySelector(".conteudo").innerHTML = listaDeDisciplinas;
