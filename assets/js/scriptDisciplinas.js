@@ -28,8 +28,8 @@ function cadastrarDisciplina(){
         );
 
     if (cadastro == -1) {
-        arrayProfessores.push(professores);
-        console.log(arrayProfessores);
+        arrayDisciplinas.push(disciplinas);
+        console.log(arrayDisciplinas);
         return alert("Cadastro realizado com sucesso!");
     } else {
         return alert("Disciplina já está cadastrada no sistema!");
