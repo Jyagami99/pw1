@@ -107,8 +107,15 @@ body {
     margin-top: 8px;
     width: 250px;
     height: 20px;
+    transition: all 200ms;
   }
   
+  .submenu > div:hover{
+    background-color: #161629;
+    transform: scale(1.05)
+  
+  }
+
   .content {
     display: none;
     height: 100px;
