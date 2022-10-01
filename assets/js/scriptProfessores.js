@@ -191,3 +191,39 @@ function mostraCadastro() {
   </button>
   `;
 }
+
+function excluiDado() {
+  let registroFuncional = document.getElementById(
+    "registroFuncionalEspecifico"
+  ).value;
+  let conteudo = document.querySelector(".conteudo");
+
+  if (registroFuncional.length !== 0) {
+    for (let i = 0; i < arrayProfessores.length; i++) {
+      if (arrayProfessores[i][0] === registroFuncional) {
+        arrayProfessores.splice(i, 1);
+        alert(
+          `O professor com RF ${registroFuncional} foi deletado do sistema!`
+        );
+      }
+    }
+  } else {
+    alert("Insira um RF válido!");
+  }
+}
+
+function excluiEspecifico() {
+  let conteudo = document.querySelector(".conteudo");
+  conteudo.innerHTML = `
+  <div class="pesquisaEspecifica">
+    <input
+      type="text"
+      class="registroFuncionalEspecifico"
+      id="registroFuncionalEspecifico"
+      placeholder="Digite o RF que deseja excluir"
+      required
+    />
+    <button onclick="excluiDado()">Pesquisar</button>
+  </div>
+  `;
+}

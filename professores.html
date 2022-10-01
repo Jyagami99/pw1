@@ -24,8 +24,8 @@
         <div onclick="mostraCadastro()">Cadastrar um novo professor</div>
         <div onclick="mostraProfessor()">Listar todos os professores</div>
         <div onclick="listarEspecifico()">Listar um professor específico</div>
-        <div onclick="">Altera um dado</div>
-        <div onclick="">Excluir um dado</div>
+        <div onclick="alteraEspecifico()">Altera um dado</div>
+        <div onclick="excluiEspecifico()">Excluir um dado</div>
       </div>
       <div class="conteudo">
         <form class="formularioCadastro" name="searchfield" method="get">
@@ -88,7 +88,7 @@
             required
           />
         </form>
-        <button id="botao" onclick="cadastroProfessor()">
+        <button id="botao" class="botao" onclick="cadastroProfessor()">
           Cadastrar Professor
         </button>
       </div>
