@@ -118,7 +118,7 @@ function listarEspecifico() {
       placeholder="Digite o RF desejado"
       required
     />
-    <button onclick="pesquisarPorRF()">Pesquisar</button>
+    <button class="botao" onclick="pesquisarPorRF()">Pesquisar</button>
   </div>
   `;
 }
@@ -186,7 +186,7 @@ function mostraCadastro() {
       required
     />
   </form>
-  <button id="botao" onclick="cadastroProfessor()">
+  <button id="botao" class="botao" onclick="cadastroProfessor()">
     Cadastrar Professor
   </button>
   `;

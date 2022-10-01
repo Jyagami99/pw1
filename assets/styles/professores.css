@@ -107,8 +107,14 @@ a {
   margin-top: 8px;
   width: 250px;
   height: 20px;
+  transition: all 200ms;
 }
 
+.submenu > div:hover{
+  background-color: #161629;
+  transform: scale(1.05)
+
+}
 
 .content {
   display: none;
@@ -137,10 +143,40 @@ form input:focus {
   background-color: #bfb0c5;
 }
 
-.pesquisaEspecifica{
-
+.botao {
+  background-color: #f3f3d4;
+  border-radius: 50px;
+  border-width: 0;
+  box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  height: 30px;
+  padding: 0 25px;
+  transition: all 200ms;
 }
 
+<<<<<<< HEAD
 .registroFuncionalEspecifico{
 
+=======
+.botao:hover{
+  background-color: #e6e2af;
+  transform: scale(1.05)
+}
+
+input {
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding-left: 8px;
+  width: 100%;
+  height: 24px;
+}
+
+p{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+>>>>>>> 8751601fd7f9b6ed1b434f7c9964551af1bd2e45
 }
