@@ -93,8 +93,6 @@ function pesquisarPorSigla() {
   } else {
     alert("Insira uma sigla válida!");
   }
-
-  // console.log(registroFuncional);
 }
 
 function listarEspecifico() {
@@ -163,5 +161,41 @@ function mostraCadastro() {
   <button id="botao" class="botao" onclick="cadastrarDisciplina()">
     Cadastrar disciplina
   </button>
+  `;
+}
+
+function excluiDado() {
+  let sigla = document.getElementById(
+    "siglaEspecifica"
+  ).value;
+  let conteudo = document.querySelector(".conteudo");
+
+  if (sigla.length !== 0) {
+    for (let i = 0; i < arrayDisciplinas.length; i++) {
+      if (arrayDisciplinas[i][0] === sigla) {
+        arrayDisciplinas.splice(i, 1);
+        alert(
+          `A disciplina com a Sigla ${registroFuncional} foi deletada do sistema!`
+        );
+      }
+    }
+  } else {
+    alert("Insira uma sigla válida!");
+  }
+}
+
+function excluiEspecifico() {
+  let conteudo = document.querySelector(".conteudo");
+  conteudo.innerHTML = `
+  <div class="pesquisaEspecifica">
+    <input
+      type="text"
+      class="siglaEspecifica"
+      id="siglaEspecifica"
+      placeholder="Digite a sigla que deseja excluir"
+      required
+    />
+    <button class="botao" onclick="excluiDado()">Pesquisar</button>
+  </div>
   `;
 }
