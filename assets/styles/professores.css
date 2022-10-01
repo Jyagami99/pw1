@@ -158,10 +158,6 @@ form input:focus {
   transition: all 200ms;
 }
 
-<<<<<<< HEAD
-.registroFuncionalEspecifico{
-
-=======
 .botao:hover{
   background-color: #e6e2af;
   transform: scale(1.05)
@@ -178,5 +174,4 @@ input {
 p{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-style: italic;
->>>>>>> 8751601fd7f9b6ed1b434f7c9964551af1bd2e45
 }
