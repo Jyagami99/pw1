@@ -63,3 +63,7 @@ function mostrarDisciplinas() {
       alert("Não há disciplinas cadastradas!");
     }
   }
+
+function mostrarEspecifico() {
+    
+}
