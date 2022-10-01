@@ -64,6 +64,104 @@ function mostrarDisciplinas() {
     }
   }
 
-function mostrarEspecifico() {
-    
+function pesquisarPorSigla() {
+  let sigla = document.getElementById(
+    "siglaEspecifica"
+  ).value;
+  let conteudo = document.querySelector(".conteudo");
+
+  if (sigla.length !== 0) {
+    for (let i = 0; i < arrayDisciplinas.length; i++) {
+      if (arrayDisciplinas[i][0] === sigla) {
+        conteudo.innerHTML = `
+        <p>
+          Sigla: ${arrayDisciplinas[i][0]} 
+          <br>
+          Nome:  ${arrayDisciplinas[i][1]}
+          <br>
+          Ementa: ${arrayDisciplinas[i][2]}
+          <br>
+          Livros e Bibliografia: ${arrayDisciplinas[i][3]} 
+          <br>
+          Número de Créditos: ${arrayDisciplinas[i][4]} 
+          <br>
+          Carga Horária: ${arrayDisciplinas[i][5]} 
+        </p>`;
+        break;
+      }
+    }
+  } else {
+    alert("Insira uma sigla válida!");
+  }
+
+  // console.log(registroFuncional);
+}
+
+function listarEspecifico() {
+  let conteudo = document.querySelector(".conteudo");
+  conteudo.innerHTML = `
+  <div class="pesquisaEspecifica">
+    <input
+      type="text"
+      class="siglaEspecifica"
+      id="siglaEspecifica"
+      placeholder="Digite a sigla desejada"
+      required
+    />
+    <button class="botao" onclick="pesquisarPorSigla()">Pesquisar</button>
+  </div>
+  `;
+}
+
+function mostraCadastro() {
+  let conteudo = document.querySelector(".conteudo");
+  conteudo.innerHTML = `
+  <form class="formularioCadastro" name="searchfield" method="get">
+    <input
+      type="text"
+      id="sigla"
+      name="sigla"
+      placeholder="Sigla da disciplina"
+      required
+    />
+      <input
+      type="text"
+      id="nomed"
+      name="nomed"
+      placeholder="Nome da disciplina"
+      required
+    />
+      <input
+      type="text"
+      id="ementa"
+      name="ementa"
+      placeholder="Ementa"
+      required
+    />
+      <input
+      type="text"
+      id="livros_bibliografia"
+      name="livros_bibliografia"
+      placeholder="Livros e Bibligrafia"
+      required
+    />
+      <input
+      type="number"
+      id="numeroCreditos"
+      name="numeroCreditos"
+      placeholder="Número de Créditos"
+      required
+    />
+      <input
+      type="number"
+      id="cargaHoraria"
+      name="cargaHoraria"
+      placeholder="Carga Horária"
+      required
+    />
+  </form>
+  <button id="botao" class="botao" onclick="cadastrarDisciplina()">
+    Cadastrar disciplina
+  </button>
+  `;
 }

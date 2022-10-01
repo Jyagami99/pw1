@@ -218,7 +218,7 @@ function excluiEspecifico() {
       placeholder="Digite o RF que deseja excluir"
       required
     />
-    <button onclick="excluiDado()">Pesquisar</button>
+    <button class="botao" onclick="excluiDado()">Pesquisar</button>
   </div>
   `;
 }
