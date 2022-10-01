@@ -109,10 +109,6 @@ a {
   height: 20px;
 }
 
-.selected {
-  border: 1px solid green;
-}
-
 
 .content {
   display: none;
@@ -141,6 +137,10 @@ form input:focus {
   background-color: #bfb0c5;
 }
 
-#botao {
-  bottom: 230px;
+.pesquisaEspecifica{
+
+}
+
+.registroFuncionalEspecifico{
+  
 }

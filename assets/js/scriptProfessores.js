@@ -70,41 +70,57 @@ function mostraProfessor() {
   }
 }
 
+function pesquisarPorRF() {
+  let registroFuncional = document.getElementById(
+    "registroFuncionalEspecifico"
+  ).value;
+  let conteudo = document.querySelector(".conteudo");
+
+  if (registroFuncional.length !== 0) {
+    for (let i = 0; i < arrayProfessores.length; i++) {
+      if (arrayProfessores[i][0] === registroFuncional) {
+        conteudo.innerHTML = `
+        <p>
+          Registro Funcional: ${arrayProfessores[i][0]} 
+          <br>
+          Nome Completo:  ${arrayProfessores[i][1]}
+          <br>
+          Data de Nascimento: ${arrayProfessores[i][2]}
+          <br>
+            Sexo: ${arrayProfessores[i][3]} 
+          <br>
+          Área de Pesquisa: ${arrayProfessores[i][4]} 
+          <br>
+          Universidade: ${arrayProfessores[i][5]} 
+          <br>
+          Email:  ${arrayProfessores[i][6]} 
+          <br>
+          Telefone: ${arrayProfessores[i][7]}
+        </p>`;
+        break;
+      }
+    }
+  } else {
+    alert("Insira um RF válido!");
+  }
+
+  // console.log(registroFuncional);
+}
+
 function listarEspecifico() {
-  // let rf = document.getElementById("listarProfessor").value;
-  // let profCadastrado =
-  //   "<table><tr><th>Registro Funcional</td><th>Nome</td><th>Data de nascimento</td><th>Sexo</td><th>Área de Pesquisa</td><th>Universidade de Formação</td><th>Email(s)</td><th>Telefone(s)</td></tr>";
-  // if (arrayProfessores.length > 0) {
-  //   cadastro = verificarCadastro(arrayProfessores, rf);
-  //   if (cadastro != -1) {
-  //     profCadastrado +=
-  //       "<tr><td>" +
-  //       arrayProfessores[i].RegistroFuncional +
-  //       "<tr><td>" +
-  //       arrayProfessores[i].NomeCompleto +
-  //       "<tr><td>" +
-  //       arrayProfessores[i].DataDeNascimento +
-  //       "<tr><td>" +
-  //       arrayProfessores[i].Sexo +
-  //       "<tr><td>" +
-  //       arrayProfessores[i].AreaPesquisa +
-  //       "<tr><td>" +
-  //       arrayProfessores[i].Universidade +
-  //       "<tr><td>" +
-  //       arrayProfessores[i].Email +
-  //       "<tr><td>" +
-  //       arrayProfessores[i].Telefone +
-  //       "<tr><td>";
-  //     profCadastrado += "</table>";
-  //     document.getElementById("tabelaEspecifico").innerHTML = profCadastrado;
-  //   } else {
-  //     document.getElementById("tabelaEspecifico").innerHTML =
-  //       "Professor não encontrado no sistema!";
-  //   }
-  // } else {
-  //   document.getElementById("tabelaEspecifico").innerHTML =
-  //     "Não existe professores cadastrados no sistema!";
-  // }
+  let conteudo = document.querySelector(".conteudo");
+  conteudo.innerHTML = `
+  <div class="pesquisaEspecifica">
+    <input
+      type="text"
+      class="registroFuncionalEspecifico"
+      id="registroFuncionalEspecifico"
+      placeholder="Digite o RF desejado"
+      required
+    />
+    <button onclick="pesquisarPorRF()">Pesquisar</button>
+  </div>
+  `;
 }
 
 function mostraCadastro() {
@@ -174,6 +190,4 @@ function mostraCadastro() {
     Cadastrar Professor
   </button>
   `;
-
-  // console.log(conteudo);
 }
